@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0b0b0d" />
+
+<title>Tiote Beauté — Salon de coiffure premium | Coupe, balayage, ombré, barbe</title>
+<meta name="description" content="Tiote Beauté, salon de coiffure haut de gamme. Coupe femme & homme, balayage, ombré hair, coloration et taille de barbe. Révélez votre style — réservez en ligne." />
+<meta name="keywords" content="coiffeur, salon de coiffure, balayage, ombré hair, coloration, coupe homme, coupe femme, taille de barbe, coiffure mariage, Tiote Beauté" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.tiote-beaute.fr/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Tiote Beauté — Salon de coiffure premium" />
+<meta property="og:description" content="Révélez votre style dans un écrin haut de gamme." />
+<meta property="og:image" content="assets/img/salon-interieur.jpg" />
+<meta property="og:locale" content="fr_FR" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✂️</text></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org", "@type": "HairSalon",
+  "name": "Tiote Beauté",
+  "image": "https://www.tiote-beaute.fr/assets/img/salon-interieur.jpg",
+  "description": "Salon de coiffure haut de gamme : coupe, balayage, ombré, coloration et taille de barbe.",
+  "url": "https://www.tiote-beaute.fr/", "telephone": "+33-0-00-00-00-00", "priceRange": "€€",
+  "address": { "@type": "PostalAddress", "streetAddress": "1 Rue du Village", "addressLocality": "Votre Ville", "postalCode": "00000", "addressCountry": "FR" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "128" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "17:00" }
+  ]
+}
+</script>
+</head>
+
+<body>
+<div class="page-bg"></div>
+<div class="preloader" id="preloader" aria-hidden="true"><div class="preloader__inner"><span class="preloader__brand">Tiote&nbsp;Beauté</span><span class="preloader__line"><span class="preloader__fill"></span></span></div></div>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav__inner container">
+    <a href="index.html" class="nav__logo" aria-label="Tiote Beauté — accueil"><span class="nav__logo-mark">✂</span><span class="nav__logo-text">Tiote<em>Beauté</em></span></a>
+    <nav class="nav__links" id="navLinks" aria-label="Navigation principale">
+      <a href="index.html" class="is-active">Accueil</a>
+      <a href="salon.html">Le salon</a>
+      <a href="prestations.html">Prestations</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="avis.html">Avis</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html#rdv" class="nav__cta">Prendre rendez-vous</a>
+    </nav>
+    <div class="nav__tools">
+      <button class="theme-toggle" id="themeToggle" aria-label="Mode sombre / clair" title="Mode sombre / clair">
+        <svg class="theme-toggle__sun" viewBox="0 0 24 24" width="18" height="18"><path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0-14v2m0 18v-2m9-9h-2M5 12H3m14.95-7.95-1.41 1.41M6.46 17.54l-1.41 1.41m14.5 0-1.41-1.41M6.46 6.46 5.05 5.05" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <svg class="theme-toggle__moon" viewBox="0 0 24 24" width="18" height="18"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="nav__burger" id="navBurger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="hero" data-bg="#0b0b0d">
+  <div class="hero__media">
+    <video class="hero__video" autoplay muted loop playsinline poster="assets/img/salon-interieur.jpg">
+      <source src="assets/video/hero.mp4" type="video/mp4" />
+    </video>
+    <div class="hero__overlay"></div>
+  </div>
+  <div class="hero__content container">
+    <p class="hero__eyebrow" data-reveal>Salon de coiffure · Expérience premium</p>
+    <h1 class="hero__title"><span data-reveal-word>Révélez</span> <span data-reveal-word>votre</span> <span data-reveal-word class="italic gold">style</span></h1>
+    <p class="hero__sub" data-reveal>L'art de la coiffure sur-mesure, dans un écrin où chaque détail est pensé pour vous.</p>
+    <div class="hero__actions" data-reveal>
+      <a href="contact.html#rdv" class="btn btn--gold" data-magnetic="0.35">Prendre rendez-vous</a>
+      <a href="salon.html" class="btn btn--ghost" data-magnetic="0.25">Découvrir le salon</a>
+    </div>
+  </div>
+  <a href="#story" class="hero__scroll" aria-label="Défiler"><span>Défiler</span><span class="hero__scroll-line"></span></a>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true"><div class="marquee__track">
+  <span>Coupe Femme</span><i>✦</i><span>Coupe Homme</span><i>✦</i><span>Balayage</span><i>✦</i><span>Ombré Hair</span><i>✦</i><span>Coloration</span><i>✦</i><span>Taille de Barbe</span><i>✦</i><span>Coiffure Mariage</span><i>✦</i>
+  <span>Coupe Femme</span><i>✦</i><span>Coupe Homme</span><i>✦</i><span>Balayage</span><i>✦</i><span>Ombré Hair</span><i>✦</i><span>Coloration</span><i>✦</i><span>Taille de Barbe</span><i>✦</i><span>Coiffure Mariage</span><i>✦</i>
+</div></div>
+
+<!-- STORY teaser -->
+<section class="story section" id="story" data-bg="#0e0c09">
+  <div class="container story__grid">
+    <div class="story__media" data-reveal data-zoom>
+      <div class="story__img story__img--main"><img src="assets/img/equipe-devanture.jpg" alt="L'équipe de Tiote Beauté devant le salon" loading="lazy" /></div>
+      <div class="story__img story__img--float" data-parallax="0.12"><img src="assets/img/facade.webp" alt="La façade du salon" loading="lazy" /></div>
+      <div class="story__badge"><span class="story__badge-num">15<em>+</em></span><span class="story__badge-txt">années de passion</span></div>
+    </div>
+    <div class="story__text">
+      <p class="eyebrow" data-reveal>Notre histoire</p>
+      <h2 class="h2" data-reveal-lines>Un salon de quartier, une exigence de maison de luxe</h2>
+      <p data-reveal>Née d'une passion sincère pour le beau geste, <strong>Tiote Beauté</strong> réunit des artisans coiffeurs qui font de chaque visite un moment rare. Ici, on prend le temps : diagnostic personnalisé, conseils sur-mesure et savoir-faire d'exception.</p>
+      <ul class="story__list" data-reveal>
+        <li><span>✦</span> Diagnostic capillaire personnalisé</li>
+        <li><span>✦</span> Produits professionnels haut de gamme</li>
+        <li><span>✦</span> Un accueil sur-mesure, sans précipitation</li>
+      </ul>
+      <a href="salon.html" class="btn btn--gold" data-reveal data-magnetic="0.3">Découvrir le salon</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES teaser -->
+<section class="services section" id="services" data-bg="#0c0b0e">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow" data-reveal>Nos prestations</p>
+      <h2 class="h2" data-reveal-lines>Un savoir-faire pour chaque envie</h2>
+      <p class="section-head__sub" data-reveal>Des gestes précis, des produits d'exception, une écoute qui fait la différence.</p>
+    </div>
+    <div class="services__grid">
+      <article class="s-card" data-reveal><div class="s-card__img" style="--img:url('assets/img/generated/service-coupe-femme.svg')"></div><div class="s-card__body"><span class="s-card__icon">✂</span><h3>Coupe Femme</h3><p>Coupe personnalisée et brushing qui subliment votre visage.</p><a href="prestations.html" class="s-card__link">En savoir plus <em>→</em></a></div></article>
+      <article class="s-card" data-reveal><div class="s-card__img" style="--img:url('assets/img/generated/service-balayage.svg')"></div><div class="s-card__body"><span class="s-card__icon">✦</span><h3>Balayage</h3><p>Des reflets naturels et lumineux, travaillés mèche à mèche.</p><a href="prestations.html" class="s-card__link">En savoir plus <em>→</em></a></div></article>
+      <article class="s-card" data-reveal><div class="s-card__img" style="--img:url('assets/img/generated/service-coupe-homme.svg')"></div><div class="s-card__body"><span class="s-card__icon">✂</span><h3>Coupe Homme</h3><p>Coupe nette et moderne, finitions au rasoir.</p><a href="prestations.html" class="s-card__link">En savoir plus <em>→</em></a></div></article>
+      <article class="s-card" data-reveal><div class="s-card__img" style="--img:url('assets/img/generated/service-barbe.svg')"></div><div class="s-card__body"><span class="s-card__icon">♛</span><h3>Taille de Barbe</h3><p>Contours dessinés, serviette chaude et soin sur-mesure.</p><a href="prestations.html" class="s-card__link">En savoir plus <em>→</em></a></div></article>
+    </div>
+    <div style="text-align:center;margin-top:44px" data-reveal><a href="prestations.html" class="btn btn--ghost" data-magnetic="0.25">Voir toutes les prestations &amp; tarifs</a></div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why section" data-bg="#0b0b0d">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow" data-reveal>Pourquoi nous choisir</p><h2 class="h2" data-reveal-lines>L'exigence dans chaque détail</h2></div>
+    <div class="why__grid">
+      <div class="why__item" data-reveal><div class="why__icon"><svg viewBox="0 0 48 48" class="ico-draw"><circle cx="24" cy="18" r="9"/><path d="M8 40c2-8 8-12 16-12s14 4 16 12"/></svg></div><h3>Sur-mesure</h3><p>Un diagnostic et une écoute pour une coiffure pensée pour vous.</p></div>
+      <div class="why__item" data-reveal><div class="why__icon"><svg viewBox="0 0 48 48" class="ico-draw"><path d="M24 6l4.6 9.3 10.3 1.5-7.4 7.3 1.7 10.2L24 39.3l-9.2 4.8 1.7-10.2L9 26.6l10.3-1.5z"/></svg></div><h3>Savoir-faire</h3><p>Des artisans formés aux techniques les plus pointues.</p></div>
+      <div class="why__item" data-reveal><div class="why__icon"><svg viewBox="0 0 48 48" class="ico-draw"><path d="M24 42s-15-8.6-15-20a8 8 0 0 1 15-4 8 8 0 0 1 15 4c0 11.4-15 20-15 20z"/></svg></div><h3>Produits premium</h3><p>Une sélection de soins professionnels respectueux du cheveu.</p></div>
+      <div class="why__item" data-reveal><div class="why__icon"><svg viewBox="0 0 48 48" class="ico-draw"><circle cx="24" cy="24" r="17"/><path d="M24 13v11l8 5"/></svg></div><h3>Temps pour vous</h3><p>Aucune précipitation : votre moment est un vrai rituel.</p></div>
+    </div>
+    <div class="stats" data-reveal>
+      <div class="stat"><span class="stat__num" data-count="4300">0</span><span class="stat__label">clients satisfaits</span></div>
+      <div class="stat"><span class="stat__num" data-count="15">0</span><span class="stat__label">années d'expérience</span></div>
+      <div class="stat"><span class="stat__num" data-count="12">0</span><span class="stat__label">prestations signatures</span></div>
+      <div class="stat"><span class="stat__num" data-count="4.9" data-decimals="1">0</span><span class="stat__label">note moyenne Google</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER teaser -->
+<section class="ba section" id="avant-apres" data-bg="#100c08">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow" data-reveal>Transformations</p><h2 class="h2" data-reveal-lines>Avant · Après</h2><p class="section-head__sub" data-reveal>Faites glisser le curseur pour révéler la métamorphose.</p></div>
+    <div class="ba__stage" data-reveal>
+      <div class="ba-compare" id="baCompare">
+        <img class="ba-compare__img ba-compare__after" src="assets/img/generated/ba1-after.svg" alt="Après la transformation" draggable="false" />
+        <div class="ba-compare__before" id="baBefore"><img class="ba-compare__img" src="assets/img/generated/ba1-before.svg" alt="Avant la transformation" draggable="false" /></div>
+        <span class="ba-compare__label ba-compare__label--before">Avant</span>
+        <span class="ba-compare__label ba-compare__label--after">Après</span>
+        <div class="ba-compare__handle" id="baHandle"><span class="ba-compare__grip">‹ ›</span></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px" data-reveal><a href="galerie.html" class="btn btn--ghost" data-magnetic="0.25">Voir la galerie &amp; toutes les transformations</a></div>
+  </div>
+</section>
+
+<!-- GOOGLE REVIEWS -->
+<section class="greviews section" id="greviews" data-bg="#0c0b0e">
+  <div class="container">
+    <div class="section-head"><p class="eyebrow" data-reveal>Avis clients</p><h2 class="h2" data-reveal-lines>Ils ont vécu l'expérience</h2></div>
+    <div class="greviews__head" data-reveal>
+      <div class="greviews__badge">
+        <svg class="g-logo" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-2.7-.4-3.9H24v7.1h12.1c-.2 1.8-1.6 4.6-4.5 6.4l-.1.3 6.5 5 .5.1c4.1-3.8 6.6-9.4 6.6-15.1"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-6.9-5.3c-1.9 1.3-4.3 2.2-7.6 2.2-5.8 0-10.7-3.8-12.5-9.1l-.3.1-6.7 5.2-.1.3C7.5 41.1 15.1 46 24 46"/><path fill="#FBBC05" d="M11.5 28.5c-.5-1.4-.7-2.9-.7-4.5s.3-3.1.7-4.5l-.1-.3-6.8-5.3-.2.1C2.9 17.1 2 20.4 2 24s.9 6.9 2.4 9.8l7.1-5.3"/><path fill="#EA4335" d="M24 9.5c4.1 0 6.9 1.8 8.5 3.3l6.2-6C34.9 3.4 29.9 1 24 1 15.1 1 7.5 5.9 4.4 13.2l7.1 5.3C13.3 13.3 18.2 9.5 24 9.5"/></svg>
+        <div><span class="greviews__score">4,9</span> <span class="greviews__stars">★★★★★</span><br><span class="greviews__count">128 avis Google vérifiés</span></div>
+      </div>
+    </div>
+    <div class="greviews__viewport" data-reveal>
+      <div class="greviews__track">
+        <article class="g-card"><div class="g-card__top"><span class="g-card__avatar" style="background:#c98fa0">C</span><div class="g-card__who"><strong>Camille L.</strong><span>il y a 2 semaines</span></div></div><div class="g-card__stars">★★★★★</div><p class="g-card__text">Un accueil parfait et un balayage sublime. On sent le vrai savoir-faire, je ne changerais pour rien au monde.</p><div class="g-card__foot"><svg class="g-logo" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-2.7-.4-3.9H24v7.1h12.1c-.2 1.8-1.6 4.6-4.5 6.4l6.9 5.4c4.1-3.8 6.6-9.4 6.6-15"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-6.9-5.3c-1.9 1.3-4.3 2.2-7.6 2.2-5.8 0-10.7-3.9-12.5-9.2l-7 5.4C7.5 41.1 15.1 46 24 46"/><path fill="#FBBC05" d="M11.5 28.4c-.5-1.4-.7-2.9-.7-4.4s.3-3.1.7-4.5l-7-5.4C2.9 17.1 2 20.4 2 24s.9 6.9 2.5 9.8l7-5.4"/><path fill="#EA4335" d="M24 9.5c4.1 0 6.9 1.8 8.5 3.3l6.2-6C34.9 3.4 29.9 1 24 1 15.1 1 7.5 5.9 4.5 13.2l7 5.4C13.3 13.3 18.2 9.5 24 9.5"/></svg> Publié sur Google</div></article>
+        <article class="g-card"><div class="g-card__top"><span class="g-card__avatar" style="background:#4b7bc9">J</span><div class="g-card__who"><strong>Julien M.</strong><span>il y a 1 mois</span></div></div><div class="g-card__stars">★★★★★</div><p class="g-card__text">La meilleure coupe homme de la région. Précis, à l'écoute, et un vrai moment de détente à chaque visite.</p><div class="g-card__foot"><svg class="g-logo" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-2.7-.4-3.9H24v7.1h12.1c-.2 1.8-1.6 4.6-4.5 6.4l6.9 5.4c4.1-3.8 6.6-9.4 6.6-15"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-6.9-5.3c-1.9 1.3-4.3 2.2-7.6 2.2-5.8 0-10.7-3.9-12.5-9.2l-7 5.4C7.5 41.1 15.1 46 24 46"/><path fill="#FBBC05" d="M11.5 28.4c-.5-1.4-.7-2.9-.7-4.4s.3-3.1.7-4.5l-7-5.4C2.9 17.1 2 20.4 2 24s.9 6.9 2.5 9.8l7-5.4"/><path fill="#EA4335" d="M24 9.5c4.1 0 6.9 1.8 8.5 3.3l6.2-6C34.9 3.4 29.9 1 24 1 15.1 1 7.5 5.9 4.5 13.2l7 5.4C13.3 13.3 18.2 9.5 24 9.5"/></svg> Publié sur Google</div></article>
+        <article class="g-card"><div class="g-card__top"><span class="g-card__avatar" style="background:#9a6fb0">S</span><div class="g-card__who"><strong>Sarah B.</strong><span>il y a 3 semaines</span></div></div><div class="g-card__stars">★★★★★</div><p class="g-card__text">Mon ombré hair est exactement ce dont je rêvais. L'équipe est adorable et de très bon conseil.</p><div class="g-card__foot"><svg class="g-logo" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-2.7-.4-3.9H24v7.1h12.1c-.2 1.8-1.6 4.6-4.5 6.4l6.9 5.4c4.1-3.8 6.6-9.4 6.6-15"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-6.9-5.3c-1.9 1.3-4.3 2.2-7.6 2.2-5.8 0-10.7-3.9-12.5-9.2l-7 5.4C7.5 41.1 15.1 46 24 46"/><path fill="#FBBC05" d="M11.5 28.4c-.5-1.4-.7-2.9-.7-4.4s.3-3.1.7-4.5l-7-5.4C2.9 17.1 2 20.4 2 24s.9 6.9 2.5 9.8l7-5.4"/><path fill="#EA4335" d="M24 9.5c4.1 0 6.9 1.8 8.5 3.3l6.2-6C34.9 3.4 29.9 1 24 1 15.1 1 7.5 5.9 4.5 13.2l7 5.4C13.3 13.3 18.2 9.5 24 9.5"/></svg> Publié sur Google</div></article>
+        <article class="g-card"><div class="g-card__top"><span class="g-card__avatar" style="background:#57b3a4">L</span><div class="g-card__who"><strong>Léa D.</strong><span>il y a 2 mois</span></div></div><div class="g-card__stars">★★★★★</div><p class="g-card__text">Coiffure de mariage impeccable qui a tenu toute la journée. Un immense merci pour ce travail d'artiste.</p><div class="g-card__foot"><svg class="g-logo" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-2.7-.4-3.9H24v7.1h12.1c-.2 1.8-1.6 4.6-4.5 6.4l6.9 5.4c4.1-3.8 6.6-9.4 6.6-15"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-6.9-5.3c-1.9 1.3-4.3 2.2-7.6 2.2-5.8 0-10.7-3.9-12.5-9.2l-7 5.4C7.5 41.1 15.1 46 24 46"/><path fill="#FBBC05" d="M11.5 28.4c-.5-1.4-.7-2.9-.7-4.4s.3-3.1.7-4.5l-7-5.4C2.9 17.1 2 20.4 2 24s.9 6.9 2.5 9.8l7-5.4"/><path fill="#EA4335" d="M24 9.5c4.1 0 6.9 1.8 8.5 3.3l6.2-6C34.9 3.4 29.9 1 24 1 15.1 1 7.5 5.9 4.5 13.2l7 5.4C13.3 13.3 18.2 9.5 24 9.5"/></svg> Publié sur Google</div></article>
+        <article class="g-card"><div class="g-card__top"><span class="g-card__avatar" style="background:#c9794b">T</span><div class="g-card__who"><strong>Thomas R.</strong><span>il y a 5 jours</span></div></div><div class="g-card__stars">★★★★★</div><p class="g-card__text">Enfin un salon où l'on prend le temps de vous conseiller. Résultat au-delà de mes attentes.</p><div class="g-card__foot"><svg class="g-logo" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-2.7-.4-3.9H24v7.1h12.1c-.2 1.8-1.6 4.6-4.5 6.4l6.9 5.4c4.1-3.8 6.6-9.4 6.6-15"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-6.9-5.3c-1.9 1.3-4.3 2.2-7.6 2.2-5.8 0-10.7-3.9-12.5-9.2l-7 5.4C7.5 41.1 15.1 46 24 46"/><path fill="#FBBC05" d="M11.5 28.4c-.5-1.4-.7-2.9-.7-4.4s.3-3.1.7-4.5l-7-5.4C2.9 17.1 2 20.4 2 24s.9 6.9 2.5 9.8l7-5.4"/><path fill="#EA4335" d="M24 9.5c4.1 0 6.9 1.8 8.5 3.3l6.2-6C34.9 3.4 29.9 1 24 1 15.1 1 7.5 5.9 4.5 13.2l7 5.4C13.3 13.3 18.2 9.5 24 9.5"/></svg> Publié sur Google</div></article>
+      </div>
+    </div>
+    <div class="greviews__ctrl" data-reveal><button id="grPrev" aria-label="Précédent">‹</button><button id="grNext" aria-label="Suivant">›</button></div>
+    <div class="greviews__cta" data-reveal><a href="avis.html" class="btn btn--ghost" data-magnetic="0.25">Lire tous les avis</a></div>
+  </div>
+</section>
+
+<!-- BOOKING CTA -->
+<section class="booking section" id="rdv-cta" data-bg="#100c08">
+  <div class="container booking__inner">
+    <div class="booking__text">
+      <p class="eyebrow" data-reveal>Réservation</p>
+      <h2 class="h2" data-reveal-lines>Prenez rendez-vous en quelques secondes</h2>
+      <p data-reveal>Choisissez votre prestation, votre créneau et votre coiffeur. Confirmation immédiate — sans appel, sans attente.</p>
+      <div class="booking__actions" data-reveal>
+        <a href="contact.html#rdv" class="btn btn--gold" data-magnetic="0.35">Réserver en ligne</a>
+        <a href="tel:+33000000000" class="btn btn--ghost" data-magnetic="0.25">Appeler le salon</a>
+      </div>
+    </div>
+    <div class="booking__widget" data-reveal data-zoom>
+      <div class="booking__placeholder"><span class="booking__placeholder-icon">📅</span><h3>Réservez votre moment</h3><p>Intégrez ici votre module <strong>Planity</strong>, <strong>Booksy</strong> ou <strong>Calendly</strong>.</p><a href="contact.html#rdv" class="btn btn--gold">Réserver maintenant</a></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand"><span class="nav__logo-text" style="font-size:1.5rem"><span class="nav__logo-mark">✂</span> Tiote<em>Beauté</em></span><p>L'art de la coiffure sur-mesure. Révélez votre style dans un écrin premium.</p></div>
+    <nav class="footer__nav" aria-label="Pied de page"><a href="salon.html">Le salon</a><a href="prestations.html">Prestations</a><a href="galerie.html">Galerie</a><a href="avis.html">Avis</a><a href="contact.html">Contact</a><a href="contact.html#rdv">Rendez-vous</a></nav>
+    <div class="footer__cta"><a href="contact.html#rdv" class="btn btn--gold" data-magnetic="0.3">Prendre rendez-vous</a></div>
+  </div>
+  <div class="footer__bottom container"><span>© <span id="year"></span> Tiote Beauté — Tous droits réservés.</span><span>Coiffeur · Balayage · Ombré · Barbe · Coiffure mariage</span></div>
+</footer>
+
+<!-- FLOATERS -->
+<div class="floaters">
+  <a class="floater floater--wa" href="https://wa.me/33000000000" target="_blank" rel="noopener" aria-label="WhatsApp" title="Écrire sur WhatsApp"><svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c1.9 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.8 0-3.6-.5-5.1-1.4l-.4-.2-4.2 1.1 1.1-4.1-.2-.4a10 10 0 0 1-1.6-5.5C5.6 9.6 10.2 5 16 5s10.4 4.6 10.4 10.5S21.8 25.7 16 25.7zm5.7-7.8c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2s-.8 1-1 1.2c-.2.2-.4.2-.7.1-1.8-.9-3-1.6-4.2-3.6-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-1.2 1.2-1.2 2.9-.1 4.6 1.6 2.4 3.3 4.1 6 5.2 2.6 1 2.6.7 3.1.7.7 0 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg></a>
+  <a class="floater floater--call" href="tel:+33000000000" aria-label="Appeler" title="Appeler le salon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+  <button class="floater floater--top" id="backTop" aria-label="Haut de page" title="Haut de page">↑</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
