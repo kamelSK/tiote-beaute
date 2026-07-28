@@ -743,3 +743,49 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .nav__links > a.is-active { color: var(--gold); }
 .nav__links > a.is-active:not(.nav__cta)::after { width: 100%; }
 
+/* =====================================================================
+   ===============  V3 : PHOTOS RÉELLES + BANDE RÉVÉLATION  ============
+   ===================================================================== */
+
+/* ---------- Bande "révélation" : la photo du salon apparaît en fond
+   fixe (effet parallaxe), visible seulement quand on scrolle dessus ---------- */
+.reveal-band {
+  position: relative; min-height: clamp(380px, 66vh, 660px);
+  display: grid; place-items: center; text-align: center;
+  overflow: hidden; isolation: isolate; padding: clamp(70px, 10vw, 130px) 0;
+}
+.reveal-band__bg {
+  position: absolute; inset: 0; z-index: -2;
+  background-image: url("../assets/img/salon-interieur.jpg");
+  background-size: cover; background-position: center 35%;
+  background-attachment: fixed;   /* parallaxe : le fond reste fixe, révélé au scroll */
+  transform: scale(1.02);
+}
+/* Voile qui fond dans le fond du site en haut/bas -> la photo n'apparaît qu'au centre, "par moments" */
+.reveal-band::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background:
+    linear-gradient(180deg, var(--bg) 0%, transparent 26%, transparent 74%, var(--bg) 100%),
+    linear-gradient(0deg, rgba(0,0,0,.42), rgba(0,0,0,.42));
+}
+.reveal-band__inner { max-width: 780px; padding: 0 26px; }
+.reveal-band__eyebrow { letter-spacing: .3em; text-transform: uppercase; font-size: .72rem; color: var(--gold-soft); margin-bottom: 22px; }
+.reveal-band__q {
+  font-family: var(--font-title); font-style: italic; font-weight: 500;
+  font-size: clamp(1.7rem, 4.4vw, 3.1rem); line-height: 1.24; color: #fff;
+  text-shadow: 0 4px 30px rgba(0,0,0,.5);
+}
+.reveal-band__sig { margin-top: 26px; letter-spacing: .26em; text-transform: uppercase; font-size: .74rem; color: rgba(255,255,255,.72); }
+.reveal-band__sig b { color: var(--gold); font-weight: 500; }
+/* Sur mobile/tablette, background-attachment:fixed est saccadé -> on repasse en scroll + léger zoom */
+@media (max-width: 900px), (hover: none) {
+  .reveal-band__bg { background-attachment: scroll; }
+}
+
+/* ---------- Cartes prestations : léger raffinement avec photo réelle ---------- */
+.s-card__img { height: 210px; }
+.s-card__img::after { background: linear-gradient(180deg, transparent 35%, color-mix(in srgb, var(--surface) 92%, transparent) 92%, var(--surface)); }
+
+/* ---------- Un peu plus d'air (esprit éditorial premium) ---------- */
+.section-head { margin-bottom: clamp(48px, 6vw, 84px); }
+
