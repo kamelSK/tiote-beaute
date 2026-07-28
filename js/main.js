@@ -383,6 +383,82 @@
     });
   })();
 
+  /* ================= WHATSAPP — fenêtre de chat ================= */
+  (function whatsapp() {
+    const btn = $('.floater--wa');
+    if (!btn) return;
+    const waHref = btn.getAttribute('href') || 'https://wa.me/33000000000';
+    const num = (waHref.match(/wa\.me\/(\d+)/) || [])[1] || '33000000000';
+    const chatLink = 'https://wa.me/' + num + '?text=' + encodeURIComponent("Bonjour Tiote Beauté, j'aimerais des informations.");
+
+    // Badge notification sur le bouton
+    const badge = document.createElement('span');
+    badge.className = 'wa-badge'; badge.textContent = '1';
+    btn.appendChild(badge);
+
+    // Fenêtre de chat
+    const pop = document.createElement('div');
+    pop.className = 'wa-popup'; pop.id = 'waPopup';
+    pop.setAttribute('role', 'dialog');
+    pop.setAttribute('aria-label', 'Chat WhatsApp Tiote Beauté');
+    pop.innerHTML = `
+      <div class="wa-popup__head">
+        <span class="wa-popup__avatar">✂</span>
+        <div class="wa-popup__title"><strong>Tiote Beauté</strong><span>En ligne</span></div>
+        <button class="wa-popup__close" type="button" aria-label="Fermer le chat">✕</button>
+      </div>
+      <div class="wa-popup__body">
+        <div class="wa-popup__typing" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="wa-popup__msg" hidden>
+          <div class="wa-popup__bubble">👋 Bonjour et bienvenue chez <strong>Tiote Beauté</strong> !<br>Comment puis-je vous aider ?</div>
+          <p class="wa-popup__meta">L'équipe répond généralement en quelques minutes</p>
+          <a class="wa-popup__cta" href="${chatLink}" target="_blank" rel="noopener">
+            <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-1.8c1.9 1 4 1.6 6 1.6 7 0 12.5-5.5 12.5-12.5S23 3 16 3z"/></svg>
+            Démarrer la conversation
+          </a>
+        </div>
+      </div>`;
+    document.body.appendChild(pop);
+
+    const typing = $('.wa-popup__typing', pop);
+    const msg = $('.wa-popup__msg', pop);
+    let firstOpen = true;
+
+    const open = () => {
+      pop.classList.add('is-open');
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-expanded', 'true');
+      if (firstOpen) {
+        firstOpen = false;
+        typing.style.display = ''; msg.hidden = true;
+        setTimeout(() => { typing.style.display = 'none'; msg.hidden = false; }, reduce ? 0 : 1100);
+      }
+    };
+    const close = () => {
+      pop.classList.remove('is-open');
+      btn.classList.remove('is-active');
+      btn.setAttribute('aria-expanded', 'false');
+    };
+    const toggle = () => pop.classList.contains('is-open') ? close() : open();
+
+    // Le bouton flottant ouvre la fenêtre au lieu d'aller direct sur WhatsApp
+    btn.setAttribute('role', 'button');
+    btn.setAttribute('aria-haspopup', 'dialog');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.addEventListener('click', e => { e.preventDefault(); toggle(); });
+
+    $('.wa-popup__close', pop).addEventListener('click', close);
+    // La fenêtre s'ouvre d'elle-même après quelques secondes (une seule fois par visite)
+    if (!sessionStorage.getItem('tb-wa-seen')) {
+      setTimeout(() => { if (firstOpen) { open(); sessionStorage.setItem('tb-wa-seen', '1'); } }, 6000);
+    }
+    // Fermer au clic extérieur / Échap
+    document.addEventListener('click', e => {
+      if (pop.classList.contains('is-open') && !pop.contains(e.target) && !btn.contains(e.target)) close();
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+  })();
+
   /* ================= Image fallback ================= */
   $$('img').forEach(img => img.addEventListener('error', () => {
     if (img.dataset.fallback) return; img.dataset.fallback = '1';
